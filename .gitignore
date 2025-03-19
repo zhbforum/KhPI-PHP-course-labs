@@ -1,0 +1,7 @@
+/.idea
+/.vscode
+!.gitignore
+.svn
+.idea
+.DS_Store
+.idea/*
