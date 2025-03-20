@@ -18,7 +18,7 @@ git clone https://github.com/Khoroshun/KhPI-PHP-course-labs.git
 
 ```bash
 cd KhPI-PHP-course-labs
-docker-compose up -d
+docker compose up -d
 ```
 
 Перевірте роботу сервера, відкривши у браузері:
