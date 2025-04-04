@@ -56,6 +56,20 @@ services:
           - "dbdata:/var/lib/postgresql/data"
       networks:
           - local
+    mysql:
+      image: mysql:latest
+      restart: on-failure
+      environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+        MYSQL_DATABASE: ${MYSQL_DB}
+        MYSQL_USER: ${MYSQL_USER}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      volumes:
+        - "mysqldata:/var/lib/mysql"
+      ports:
+        - "3306:3306"
+      networks:
+        - local
     adminer:
       image: adminer:4.8.1
       restart: always
@@ -75,3 +89,5 @@ volumes:
         driver: local
     dbdata:
         driver: local
+    mysqldata:
+      driver: local

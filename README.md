@@ -61,6 +61,30 @@ git push origin main
 
 ---
 
+### Доступ до баз даних
+
+в цій збірці доступні бази даних PostgreSQL та MySQL
+
+#### PostgreSQL
+
+adminer: http://127.0.0.1:8084/?pgsql=postgres&username=getting-started-user&db=getting-started&ns=public
+
+user: ```getting-started-user```
+
+password: ```getting-started-password```
+
+db: ```getting-started```
+
+#### MySQL
+
+adminer: http://127.0.0.1:8084/?server=mysql&username=started-user&db=started
+
+user: ```started-user```
+
+password: ```started-password```
+
+db: ```started```
+
 ## Важливі зауваження
 
 - Кожна лабораторна виконується у своїй папці (`lab1`, `lab2`, тощо).
