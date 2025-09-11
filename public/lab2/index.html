@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lab #2 — File upload & filesystem (PHP)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Lab #2</h1>
+
+    <fieldset>
+        <legend>Image upload form</legend>
+        <form action="process.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+            <label for="file">Choose an image (PNG/JPG/JPEG, ≤ 2 MB):</label>
+            <input type="file" name="file" id="file" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
+            <p class="hint">
+                File will be saved to <code>uploads/</code>. If the name is taken, a unique suffix will be added.
+            </p>
+            <button type="submit">Upload</button>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Append text to log</legend>
+        <form action="text.php" method="post">
+            <label for="content">Text to write to <code>log.txt</code>:</label>
+            <textarea id="content" name="content" rows="5" placeholder="Enter some text..." required></textarea>
+            <button type="submit">Write &amp; show log</button>
+        </form>
+    </fieldset>
+
+    <p><a href="list.php">View all files in <code>uploads/</code></a></p>
+</body>
+
+</html>

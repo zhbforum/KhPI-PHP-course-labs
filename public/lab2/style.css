@@ -1,0 +1,50 @@
+body {
+    font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+}
+
+button {
+    padding: .6rem 1rem;
+    cursor: pointer;
+}
+
+.hint {
+    color: #555;
+    font-size: .9em;
+}
+
+pre {
+    background: #f6f6f6;
+    padding: 1rem;
+    border: 1px solid #eee;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+ul {
+    margin: 1rem 0;
+}
+
+img {
+    display: block;
+    margin-top: 1rem;
+    max-width: 100%;
+    height: auto;
+}
