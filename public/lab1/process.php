@@ -44,17 +44,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     exit;
 }
 
-$firstName = trim((string)($_POST['first_name'] ?? ''));
-$lastName  = trim((string)($_POST['last_name']  ?? ''));
+$firstName = trim((string) ($_POST['first_name'] ?? ''));
+$lastName = trim((string) ($_POST['last_name'] ?? ''));
 
 $firstName = preg_replace('/\s+/u', ' ', $firstName) ?? $firstName;
-$lastName  = preg_replace('/\s+/u', ' ', $lastName)  ?? $lastName;
+$lastName = preg_replace('/\s+/u', ' ', $lastName) ?? $lastName;
 
 $pattern = '/^[\p{L}\s\'-]+$/u';
 
 $errors = [
     ...validateName($firstName, 'First name', $pattern, MAX_LENGTH_NAME),
-    ...validateName($lastName,  'Last name',  $pattern, MAX_LENGTH_NAME),
+    ...validateName($lastName, 'Last name', $pattern, MAX_LENGTH_NAME),
 ];
 
 if ($errors) {
@@ -70,6 +70,6 @@ echo '<h1>Welcome!</h1>';
 echo '<p>Hello, <strong>' . e($firstName) . ' ' . e($lastName) . '</strong></p>';
 
 $fnNorm = mb_convert_case($firstName, MB_CASE_TITLE, APP_CHARSET);
-$lnNorm = mb_convert_case($lastName,  MB_CASE_TITLE, APP_CHARSET);
+$lnNorm = mb_convert_case($lastName, MB_CASE_TITLE, APP_CHARSET);
 echo '<p>(Normalized) Hello, <strong>' . e($fnNorm) . ' ' . e($lnNorm) . '</strong></p>';
 echo '<p><a href="index.html">Back to form</a></p>';
