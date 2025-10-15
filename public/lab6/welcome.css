@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center
+}
+
+a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #eab308;
+    color: #1f1f1f;
+    text-decoration: none;
+    font-weight: 600
+}
+
+a:hover {
+    filter: brightness(0.95)
+}
