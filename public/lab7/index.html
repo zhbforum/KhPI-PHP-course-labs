@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+<meta charset="utf-8">
+<title>Lab7</title>
+<link rel="stylesheet" href="./css.php">
+
+<body>
+    <h1>Caching</h1>
+
+    <div class="card">
+        <h3>Client cache</h3>
+        <p><img src="./image.php" alt="logo" width="120" height="120"></p>
+        <p><small class="muted">Test: вкладка <b>Network</b> → у колонці <b>Size</b> має бути <i>(from disk
+                    cache)</i> або <i>(cached)</i>.</small></p>
+    </div>
+
+    <div class="card">
+        <h3>Server cache in file</h3>
+        <a class="btn primary" href="./generate-report.php" target="_blank">Відкрити звіт</a>
+        <a class="btn" href="./clear-caches.php?what=file" target="_blank">Очистити файл-кеш</a>
+        <p><small class="muted">Перший запит ~3с, далі — миттєво до 10 хвилин.</small></p>
+    </div>
+
+    <div class="card">
+        <h3>Cache in session</h3>
+        <a class="btn primary" href="./session-cache.php" target="_blank">Отримати курси</a>
+        <a class="btn" href="./clear-caches.php?what=session" target="_blank">Скинути сесію</a>
+        <p><small class="muted">Перший запит ~2с, далі — миттєво до 10 хвилин.</small></p>
+    </div>
+
+    <div class="card">
+        <h3>Static cache(in one request)</h3>
+        <a class="btn" href="./static-cache.php" target="_blank">Запустити демо</a>
+        <p><small class="muted">Показує memoization через static властивість.</small></p>
+    </div>
+</body>
+
+</html>
